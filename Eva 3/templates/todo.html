@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine</title>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="#">Cines</a>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/listar_entradas/">Lista de Entradas</a></li>
+                <li><a href="/registrar_entrada/">Registrar Entrada</a></li>
+                <li><a href="/listar_peliculas/">Lista de Películas</a></li>
+                <li><a href="/registrar_pelicula/">Registrar Película</a></li>
+                <li><a href="/listar_clientes/">Lista de Clientes</a></li>
+                <li><a href="/registrar_cliente/">Registrar Cliente</a></li>
+                <li><a href="/admin/">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

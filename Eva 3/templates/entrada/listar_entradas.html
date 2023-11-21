@@ -1,0 +1,36 @@
+{% extends "todo.html" %}
+{% block content %}
+    <div>
+        <h3>Lista de Entradas</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Código de Entrada</th>
+                    <th>Hora</th>
+                    <th>Fecha</th>
+                    <th>Butaca</th>
+                    <th>Sala</th>
+                    <th>Nombre del Cine</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entrada in entradas %}
+                    <tr>
+                        <td>{{ entrada.codigo_entrada }}</td>
+                        <td>{{ entrada.hora }}</td>
+                        <td>{{ entrada.fecha }}</td>
+                        <td>{{ entrada.butaca }}</td>
+                        <td>{{ entrada.sala }}</td>
+                        <td>{{ entrada.nombre_cine }}</td>
+                        <td>
+                            <a href="{% url 'editar_entrada' entrada.id %}">Editar</a>
+                            <a href="{% url 'eliminar_entrada' entrada.id %}">Borrar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+
